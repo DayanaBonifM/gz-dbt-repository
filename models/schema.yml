@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
+    loader: bigquery
+    description: "Raw data tables loaded from the gz_raw_data dataset in BigQuery."
+
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
+
+    tables:
+      - name: sales
+        identifier: raw_gz_sales
+        description: "Raw sales transactions including order amounts and dates."
+
+      - name: product
+        identifier: raw_gz_product
+        description: "Raw product catalog including product attributes."
+
+      - name: ship
+        identifier: raw_gz_ship
+        description: "Raw shipping information for each order."
