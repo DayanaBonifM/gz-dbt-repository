@@ -2,14 +2,10 @@ version: 2
 
 sources:
   - name: raw
-    database: "{{ target.database }}"
-    schema: "{{ target.schema }}"
+    database: molten-nirvana-477615-c9
+    schema: gz_raw_data
     loader: bigquery
     description: "Raw data tables loaded from the gz_raw_data dataset in BigQuery."
-
-    freshness:
-      warn_after: {count: 1, period: day}
-      error_after: {count: 2, period: day}
 
     tables:
       - name: sales
