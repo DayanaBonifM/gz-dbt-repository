@@ -2,15 +2,21 @@ with
 
 source as (
 
-select
-         date_date,
-         orders_id,
-         pdt_id,
-         revenue,
-         quantity
+    select * from {{ source('raw', 'sales') }}
 
-     from source
+),
 
- )
+renamed as (
 
- select * from renamed
+    select
+        date_date,
+        orders_id,
+        pdt_id,
+        revenue,
+        quantity
+
+    from source
+
+)
+
+select * from renamed
