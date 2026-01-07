@@ -78,6 +78,9 @@ sources:
 
           - name: ship_cost
             description: "Internal shipping cost."
+          
+          - name: log_cost
+            description: "the cost of preparing the parcel in the distribution centre/warehouse"
 
           - name: shipping_date
             description: "Date when the order was shipped."
