@@ -6,18 +6,17 @@ sources:
     schema: gz_raw_data
     loader: bigquery
     description: "Raw dataset containing uncleaned Greenweez data."
-    freshness: 
-      warn_after: {count: 90, period: day}
+    freshness:
+      warn_after: {  count: 90, period: da y }
     tables:
-
       - name: sales
         identifier: raw_gz_sales
         description: "Sales of Greenweez. One row per product_id per orders_id."
         config:
           loaded_at_field: "CAST(date_date AS TIMESTAMP)"
-        freshness: 
-          warn_after: {count: 90, period: day}
-
+        freshness:
+          warn_aftr: { count: 90, period: day }
+  
         columns:
           - name: date_date
             description: "Date of purchase."
@@ -78,13 +77,13 @@ sources:
 
           - name: ship_cost
             description: "Internal shipping cost."
-          
+
           - name: log_cost
             description: "the cost of preparing the parcel in the distribution centre/warehouse"
 
           - name: shipping_date
             description: "Date when the order was shipped."
-        
+
       - name: adwords
         identifier: raw_gz_adwords
         description: "Google Adwords advertising data."
@@ -100,3 +99,4 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: "Facebook advertising data."
+
