@@ -7,7 +7,7 @@ sources:
     loader: bigquery
     description: "Raw dataset containing uncleaned Greenweez data."
     freshness:
-      warn_after: {  count: 90, period: da y }
+      warn_after: {  count: 90, period: day }
     tables:
       - name: sales
         identifier: raw_gz_sales
