@@ -175,3 +175,51 @@ models:
       - name: shipping_fee
       - name: log_cost
       - name: ship_cost
+
+  - name: finance_campaigns_month
+    description: "Monthly financial metrics enriched with advertising performance and cost."
+    columns:
+      - name: datemonth
+        description: "Month of the aggregated metrics (YYYY-MM)."
+        tests:
+          - not_null
+          - unique
+
+      - name: ads_margin
+        description: "Operational margin minus advertising cost."
+
+      - name: average_basket
+        description: "Average basket value per transaction."
+
+      - name: operational_margin
+        description: "Total operational margin for the month."
+
+      - name: ads_cost
+        description: "Total advertising cost for the month."
+
+      - name: ads_impression
+        description: "Total impressions from all campaigns."
+
+      - name: ads_clicks
+        description: "Total clicks from all campaigns."
+
+      - name: quantity
+        description: "Total quantity sold during the month."
+
+      - name: revenue
+        description: "Total revenue for the month."
+
+      - name: purchase_cost
+        description: "Total purchase cost of products sold."
+
+      - name: margin
+        description: "Total margin for the month."
+
+      - name: shipping_fee
+        description: "Total shipping fees charged to customers."
+
+      - name: log_cost
+        description: "Total logistics cost for the month."
+
+      - name: ship_cost
+        description: "Total shipping cost incurred."
