@@ -131,3 +131,47 @@ models:
 
       - name: click
         description: "nb of clicks"
+  
+  - name: finance_campaigns_day
+    description: "Daily financial metrics enriched with advertising performance and cost."
+    columns:
+      - name: date
+        description: "Date of the aggregated metrics."
+        tests:
+          - not_null
+          - unique
+
+      - name: ads_margin
+        description: "Operational margin minus advertising cost."
+
+      - name: average_basket
+        description: "average basket"
+      
+      - name: operational_margin
+        description: "operational margin"
+
+      - name: ads_cost
+        description: "Total advertising cost for the day."
+
+      - name: ads_impression
+        description: "Total impressions from all campaigns."
+
+      - name: ads_clicks
+        description: "Total clicks from all campaigns."
+
+      - name: revenue
+        description: "Total revenue for the day."
+
+      - name: quantity
+        description: "Total quantity sold for the day."
+
+      - name: revenue
+        description: "revenue"
+      
+      - name: purchase_cost
+        description: "purchase cost"
+      
+      - name: margin
+      - name: shipping_fee
+      - name: log_cost
+      - name: ship_cost
