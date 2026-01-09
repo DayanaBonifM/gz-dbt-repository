@@ -103,7 +103,15 @@ models:
   - name: int_campaigns
     description: "Intermediate model that combines all ad campaign sources into a single table."
     columns:
-      - name: campaign_id
+      - name: date_date
+        description: "Date of the campaign metrics."
+        tests:
+          - not_null
+
+      - name: paid_source
+        description: "Type of add"
+
+      - name: campaign_key
         description: "Unique identifier of the advertising campaign."
         tests:
           - not_null
@@ -113,15 +121,13 @@ models:
         tests:
           - not_null
 
-      - name: date_date
-        description: "Date of the campaign metrics."
-        tests:
-          - not_null
-
       - name: ads_cost
         description: "Cost of ads for this campaign and date."
         tests:
           - not_null
 
-      - name: source
-        description: "Source platform of the campaign (adwords, bing, criteo, facebook)."
+      - name: impression
+        description: "nb of impressions"
+
+      - name: click
+        description: "nb of clicks"
